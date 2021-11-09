@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="hun">
+	
+	<head>
+		<title>MVC Demo</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+
+	<div id="page">
+
+		<div id="header">
+			<p>BÁRÁNY</p>
+		</div>
+
+		<div id="menu">
+			<a data-th-href="@{/home}">Főoldal</a>
+			<a data-th-href="@{/about}">Rólam</a>
+			<a data-th-href="@{/game}">Játék</a>
+			<a data-th-href="@{/form}">Vicci</a>
+		</div>
+
+		<div id="content">
+			<a class="button" data-th-href="@{/play}">
+				Nyomj meg!
+			</a>
+
+			<div>
+				<p class="num_text" data-th-text="${userText}"></p>
+				<p class="num_text" data-th-text="${programText}"></p>
+				<br>
+				<p data-th-text="${winner}"></p>
+			</div>
+		</div>
+
+	</div>
+		
+	</body>
+		
+</html>
