@@ -2,7 +2,7 @@ package com.registration.registration.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
+// edit
 @SpringBootApplication
 public class Application {
 
