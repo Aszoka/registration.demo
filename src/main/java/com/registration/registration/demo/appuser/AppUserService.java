@@ -34,6 +34,8 @@ public class AppUserService implements UserDetailsService {
     public String signUpUser(AppUser appUser) {
        boolean userExist = appUserRepository.findByEmail(appUser.getEmail()).isPresent();
 
+       // todo: bugfix -> if confirm expires the user can't try again because the email is already registered
+        // todo: so if(userExist && enabled is false, send new email
        if(userExist) {
            throw new IllegalStateException("email already registered");
        }
@@ -56,7 +58,6 @@ public class AppUserService implements UserDetailsService {
         confirmationTokenService.saveConfirmationToken(
                 confirmationToken);
 
-//        TODO: SEND EMAIL
 
         return token;
     }
