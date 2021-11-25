@@ -8,6 +8,7 @@ spring:
     password: admin
     url: jdbc:postgresql://localhost:5432/registration
     username: postgres
+    type
   jpa:
     hibernate:
       ddl-auto: create-drop
